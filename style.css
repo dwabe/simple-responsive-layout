@@ -1,0 +1,162 @@
+* {
+	box-sizing: border-box;
+}
+
+/* 	border: 1px solid red; */
+
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+body {
+    margin: 0 auto;
+    font-family: Open Sans;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* header ------------------------------------------------ */
+
+header {
+    background: grey;
+}
+
+.top-menu li:hover {
+    background: #5B5B5C;
+}
+
+.top-menu a:hover   {
+    color: black;
+}
+
+.top-menu img {
+    padding: 10px 0 0 10px;
+}
+
+.top-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: right;
+}
+
+.top-menu ul>li {
+    display: inline-block;
+}
+
+.top-menu ul>li>a {
+    line-height: 50px;
+    padding: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.top-menu {
+    margin-bottom: 50px;
+}
+
+/* hero -------------------------------------------------- */
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url(https://images.pexels.com/photos/865711/pexels-photo-865711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: scroll;
+}
+
+.slogan {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 10vh;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 0 1em;
+}
+
+/* gallery ------------------------------------------------ */
+
+.gallery {
+    margin: 50px auto;
+}
+
+.photo {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+}
+
+.photo:last-of-type {
+    margin-right: 0;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* map ------------------------------------------------ */
+
+.map {
+    width: 100%;
+    height: 60vh;
+    margin: 0 auto;
+    background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&scale=2&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:red%7Clabel:Company%7C40.718217,-73.998284&key=AIzaSyAM25w4QrwIXC7VoKjllL31o4UjhP7lYFc);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: scroll;
+}
+
+/* footer ------------------------------------------------ */
+
+footer {
+    background: grey;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    height: 50px;
+    padding: 1em;
+    color: white;
+}
+    
+@media(max-width: 767px) { 
+    .top-menu ul {
+        float: none;}
+    .top-menu {
+        margin-bottom: 0;
+        text-align: center;}
+    .top-menu ul>li {
+        display: block;}
+    .slogan {
+        font-size: 40px;}
+    .photo {
+        float: none;
+        width: 100%;
+        height: auto;}
+    .container {
+        padding: 0 5%}
+}
+    
+
+@media(min-width: 768px) and (max-width: 1199px) {
+    .photo {
+        float: left;
+        width: 32%;
+        margin-right: 2%;}
+}
